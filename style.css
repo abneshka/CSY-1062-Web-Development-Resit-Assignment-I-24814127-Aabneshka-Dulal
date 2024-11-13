@@ -1,0 +1,159 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
+    background: #f4f4f4;
+    color: #000;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: #333;
+    color: #fff;
+}
+
+header .logo-page {
+    font-size: 2em; /* Increased font size */
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+header .navbar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header .navbar li {
+    display: inline;
+}
+
+header .navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em; /* Adjusted font size */
+    padding: 5px 10px;
+}
+
+header .navbar a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+/* Menu Button for Mobile View */
+.menu-btn {
+    display: none;
+    font-size: 2em;
+    color: #fff;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.Adams {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 100vh;
+    background: #fff;
+    color: #000;
+}
+
+.Adams-text {
+    max-width: 50%;
+}
+
+.Adams-text h6 {
+    font-size: 1.5em; /* Increased font size */
+    color: #555;
+}
+
+.Adams-text h1 {
+    font-size: 3.5em; /* Adjusted font size */
+    margin: 10px 0;
+    color: #000;
+}
+
+.Adams-text h1 span {
+    color: #f39c12;
+}
+
+.Adams-text p {
+    font-size: 1.4em; /* Adjusted font size */
+    margin: 20px 0;
+    color: #333;
+}
+
+.Adams-text a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #f39c12;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.Adams-text a:hover {
+    background: #e67e22;
+}
+
+.Adams-image {
+    max-width: 1000%;
+    text-align: center;
+}
+
+.Adams-image img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%;
+    border: 5px solid #f39c12;
+    background: pink;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .Adams {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .Adams-text {
+        max-width: 100%;
+    }
+
+    .Adams-image {
+        max-width: 100%;
+    }
+
+    .Adams-text h1 {
+        font-size: 2.5em;
+    }
+}
