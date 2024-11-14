@@ -2,9 +2,14 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* Changed font to Poppins */
-    background: #f4f4f4;
+    font-family: 'Jost', sans-serif;
+    background-color: #f4f4f4;
     color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* Header Section */
@@ -13,14 +18,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background: #333;
+    background-color: #333;
     color: #fff;
 }
 
-header .logo-page {
-    font-size: 2em; /* Increased font size */
+header .logo, .site-logo, .logo-page {
+    font-size: 1.5em;
     font-weight: bold;
-    text-decoration: none;
     color: #fff;
 }
 
@@ -35,133 +39,76 @@ header .navbar li {
 }
 
 header .navbar a {
-    text-decoration: none;
     color: #fff;
-    font-size: 1.2em; /* Adjusted font size */
+    font-size: 1em;
     padding: 5px 10px;
+    transition: background 0.3s ease;
 }
 
 header .navbar a:hover {
-    background: #575757;
+    background-color: #575757;
     border-radius: 5px;
 }
 
 /* Menu Button for Mobile View */
-.menu-btn {
+.menu-btn, .menu-button, .menu-toggle {
     display: none;
-    font-size: 2em;
-    color: #fff;
 }
 
 #menu-icon {
     cursor: pointer;
+    font-size: 2em;
+    color: #fff;
 }
 
 /* Hero Section */
-.Adams {
+.Adams, .hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
     height: 100vh;
-    background: #fff;
-    color: #000;
+    background-color: #fff;
 }
 
-.Adams-text {
+.Adams-text, .hero-text {
     max-width: 50%;
 }
 
-.Adams-text h6 {
-    font-size: 1.5em; /* Increased font size */
+.Adams-text h6, .hero-text h6 {
+    font-size: 1.2em;
     color: #555;
 }
 
-.Adams-text h1 {
-    font-size: 3.5em; /* Adjusted font size */
+.Adams-text h1, .hero-text h1 {
+    font-size: 3em;
     margin: 10px 0;
     color: #000;
 }
 
-.Adams-text h1 span {
+.Adams-text h1 span, .hero-text h1 span {
     color: #f39c12;
 }
 
-.Adams-text p {
-    font-size: 1.4em; /* Adjusted font size */
+.Adams-text p, .hero-text p {
+    font-size: 1.2em;
     margin: 20px 0;
     color: #333;
 }
 
-.Adams-text a {
-    text-decoration: none;
-    padding: 10px 20px;
-    background: #f39c12;
-    color: #fff;
-    border-radius: 5px;
-}
-
-.Adams-text a:hover {
-    background: #e67e22;
-}
-
-.Adams-image {
-    max-width: 1000%;
-    text-align: center;
-}
-
-.Adams-image img {
+/* Profile Image */
+.Adams-image img, .hero-image img {
     width: 100%;
     max-width: 300px;
     border-radius: 50%;
     border: 5px solid #f39c12;
-    background: pink;
+    background-color: pink;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-
-    .navbar {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        width: 100%;
-    }
-
-    .navbar.active {
-        display: flex;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .Adams {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .Adams-text {
-        max-width: 100%;
-    }
-
-    .Adams-image {
-        max-width: 100%;
-    }
-
-    .Adams-text h1 {
-        font-size: 2.5em;
-    }
-}
-
-/* Section for Projects */
+/* Projects Section */
 .project {
     padding: 50px 10%;
-    background: #fff;
+    background-color: #fff;
     text-align: center;
 }
 
@@ -178,15 +125,6 @@ header .navbar a:hover {
     color: #f39c12;
 }
 
-.project .main h2::after {
-    content: '';
-    display: block;
-    width: 50%;
-    height: 4px;
-    background: #f39c12;
-    margin: 10px auto 0;
-}
-
 .project-content {
     display: flex;
     justify-content: space-around;
@@ -195,7 +133,7 @@ header .navbar a:hover {
     margin-top: 40px;
 }
 
-.project-content .block {
+.project-content .column {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     border: 2px solid #f39c12;
     border-radius: 15px;
@@ -207,17 +145,12 @@ header .navbar a:hover {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-.project-content .block:hover {
+.project-content .column:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Apply consistent styling to all project titles (h3, h4, h5, h6, h7) */
-.project-content .block h3,
-.project-content .block h4,
-.project-content .block h5,
-.project-content .block h6,
-.project-content .block h7 {
+.project-content .column h3, .project-content .column h4 {
     font-size: 1.8em;
     margin-bottom: 10px;
     color: #fff;
@@ -225,17 +158,244 @@ header .navbar a:hover {
     letter-spacing: 1px;
 }
 
-/* Paragraph styling */
-.project-content .block p {
-    font-size: 1em;
-    color: #fff;
-    line-height: 1.5;
+/* Contact Section */
+.get-in-touch, .contact-box {
+    padding: 50px 10%;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
-/* Media Query for Responsive Design */
+.get-in-touch h1, .contact-box-heading {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.get-in-touch h1 span, .contact-box-heading span {
+    color: #f39c12;
+}
+
+.form-container-contact, .contact-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f39c12;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.submit-button-contact {
+    background-color: #e67e22;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button-contact:hover {
+    background-color: #d35400;
+}
+
+/* Contact Info */
+.contact-information {
+    padding: 20px 10%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+.contact-information h2 {
+    font-size: 1.8em;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.contact-information a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.contact-information a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .menu-btn, .menu-button, .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
     .project-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .Adams, .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .Adams-text, .hero-text {
+        max-width: 100%;
+    }
+
+    .Adams-image img, .hero-image img {
+        max-width: 150px;
+    }
+}
+
+/* Video Demo Section */
+.video-demo-contain {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.video-demo-contain h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Video Container */
+.video-container-demo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-container-demo iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Video Demo */
+@media (max-width: 768px) {
+    .video-demo-contain {
+        padding: 20px;
+    }
+
+    .video-demo-contain h1 {
+        font-size: 2em;
+    }
+
+    .video-container-demo iframe {
+        height: 300px;
+    }
+}
+
+/* Site Report Section */
+.SiteReport {
+    padding: 50px 10%;
+    background-color: #fff;
+    text-align: center;
+}
+
+.SiteReport h1 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.SiteReport h2 {
+    font-size: 2em;
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.SiteReport p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/* Image Gallery Section */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .SiteReport {
+        padding: 20px;
+    }
+
+    .SiteReport h1 {
+        font-size: 2.2em;
+    }
+
+    .SiteReport h2 {
+        font-size: 1.8em;
+    }
+
+    .SiteReport p {
+        font-size: 1.1em;
+    }
+
+    footer {
+        padding: 10px;
     }
 }

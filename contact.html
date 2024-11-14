@@ -1,94 +1,71 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link rel="stylesheet" type="text/css" href="style.css">
-	    <title>MY Portfolio</title>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>MY Portfolio</title>
 
-	    <!--boxicons link-->
-	   <link rel="stylesheet"
-       href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- Boxicons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-        <!--remix icons link-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css">
+    <!-- Remix Icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@latest/fonts/remixicon.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-    </head>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400..700&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
 
-          <!-- Header Section -->
-     <header>
+<body>
+    <!-- Header Section -->
+    <header>
         <a href="#" class="logo">AD</a>
-
         <ul class="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="videoDemo.html">VideoDemo</a></li>
-        <li><a href="sitereport.html">SiteReport</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="project.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="videoDemo.html">VideoDemo</a></li>
+            <li><a href="sitereport.html">SiteReport</a></li>
         </ul>
-
-        <div class="menu-button">
-        <div class="bx bx-menu-btnn" id="menu-icon"></div>
+        <div class="menu-btn">
+            <div class="bx bx-menu" id="menu-icon"></div>
         </div>
-     </header>
-    
-    <body>
-		<header>
-		  <a href="#" class="site-logo"><span>AD</span></a>
+    </header>
 
-		  <ul class="navbar">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="project.html">Projects</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="videoDemo.html">VideoDemo</a></li>
-			<li><a href="sitereport.html">SiteReport</a></li>
-		  </ul>
-		  <div class="menu-toggle">
-              <div class="bx bx-menu" id="menu-icon"></div>
-          </div>
-        </header>
+    <!-- Contact Section -->
+    <div class="get-in-touch" id="contact">
+        <div>
+            <h1>Contact <span>Me</span></h1>
+            <p>I'm here to answer any questions you may have.</p>
+        </div>
 
-         <!--contact-section-->
-	    <div class="get-in-touch"id="contact">
-	    	<div>
-	    		<h1>Contact <span>Me</span></h1>
-	    		<p>I'm here to answer any questions you may have.</p>
-	    	</div>
-
-	    <div class="form-container-contact">
+        <div class="form-container-contact">
             <h2>Your Details</h2>
             <form action="#" method="POST">
- 
                 <label for="name">Name: </label>
                 <input type="text" id="name" name="name" required>
- 
+
                 <label for="email">Email: </label>
                 <input type="email" id="email" name="email" required>
- 
+
                 <label for="message">Message: </label>
                 <textarea id="message" name="message" rows="4" required></textarea>
- 
-                <button> type="submit" class="submit-button-contact">Submit</button>
+
+                <!-- Fixed submit button syntax -->
+                <button type="submit" class="submit-button-contact">Submit</button>
             </form>
-        </div>    	
+        </div>  
 
-     </section>
-    <!--contact-info-->
-    <section class="contact-information">
-        <h2>Contact Info</h2>
-        <info>
-            Phone: <a> href="tel:0099442266">009-944-2266</a><br>
-            Email: <a> href="mailto:aabneshkadulal7@gmail.com"--aabneshkadulal7@gmail.com</a>
-        </info>
-    </section>
-        </div>
-    </body>
-</html>    
-
-
-
-    
-
+        <!-- Contact Info -->
+        <section class="contact-information">
+            <h2>Contact Info</h2>
+            <div>
+                Phone: <a href="tel:0099442266">009-944-2266</a><br>
+                Email: <a href="mailto:aabneshkadulal7@gmail.com">aabneshkadulal7@gmail.com</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
